@@ -1,5 +1,5 @@
 import React, {useState} from 'react';
-import { StyleSheet, ScrollView, View, FlatList, Button } from 'react-native';
+import { StyleSheet, View, FlatList, Button } from 'react-native';
 import Header from './components/header.js';
 import TodoItem from './components/todoItem'
 import AddTodo from './components/addTodo.js'
@@ -7,9 +7,7 @@ import AddTodo from './components/addTodo.js'
 export  default function App() {
 
   const initialState = []
-
   const [todos, setTodos] = useState(initialState);
-
   const [filter, setFilter] = useState('active')
 
   const pressHandler = (key) =>{

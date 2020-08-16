@@ -18,11 +18,15 @@ export default function AddTodo({submitHandler}){
                 onChangeText={changeHandler}
             />
 
-            <Button onPress={() => {
-                submitHandler(text)
-                setText('')
-            
-            } } title='add todo' color='coral'/>
+            <Button 
+                onPress={() => {
+                    submitHandler(text)
+                    setText('')
+                } } 
+                title='add todo' 
+                color='coral'
+                disabled={!text}
+            />
         </View>
     )
 }
